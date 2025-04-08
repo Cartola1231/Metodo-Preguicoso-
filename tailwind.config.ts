@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				lazycash: {
+					red: '#e63946',
+					yellow: '#FFC107',
+					'yellow-hover': '#ffcb2d',
+					green: '#5CB85C',
+					black: '#121212',
+					'gray-dark': '#333333',
+					white: '#f5f5f5',
 				}
 			},
 			borderRadius: {
@@ -84,11 +94,35 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-strong': {
+					'0%, 100%': { transform: 'scale(1)' },
+					'50%': { transform: 'scale(1.05)' }
+				},
+				'float-money': {
+					'0%': { transform: 'translateY(0px) rotate(0deg)' },
+					'50%': { transform: 'translateY(-15px) rotate(5deg)' },
+					'100%': { transform: 'translateY(0px) rotate(0deg)' }
+				},
+				'shimmer': {
+					'0%': { backgroundPosition: '-200% 0' },
+					'100%': { backgroundPosition: '200% 0' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-strong': 'pulse-strong 2s infinite',
+				'float-money': 'float-money 3s infinite ease-in-out',
+				'shimmer': 'shimmer 2s infinite linear'
+			},
+			fontFamily: {
+				'impact': ['Impact', 'Arial Black', 'sans-serif'],
+				'anton': ['Anton', 'Impact', 'sans-serif'],
+			},
+			backgroundImage: {
+				'money-pattern': "url('/public/lovable-uploads/fb2a7388-f266-4310-af80-92ae81f2c583.png')",
+				'gradient-dark': 'linear-gradient(to bottom, #121212, #1a1a1a)',
 			}
 		}
 	},
